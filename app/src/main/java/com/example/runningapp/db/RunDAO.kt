@@ -6,7 +6,7 @@ import androidx.room.*
 @Dao
 interface RunDAO  {
     @Insert(onConflict = OnConflictStrategy.REPLACE )
-     suspend fun inseretRun(run: Run)
+     suspend fun InsertRun(run: Run)
 
      @Delete
      suspend fun deleteRun(run: Run)
@@ -38,7 +38,7 @@ interface RunDAO  {
 
 
     @Query("SELECT SUM(distanceInMeters) FROM running_table")
-    fun getTotaDistance():LiveData<Int>
+    fun getTotalDistance():LiveData<Int>
 
 
 
